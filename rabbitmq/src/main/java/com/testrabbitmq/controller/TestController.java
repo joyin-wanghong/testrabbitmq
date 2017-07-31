@@ -18,7 +18,7 @@ public class TestController {
 	@RequestMapping("/doTest")
 	@ResponseBody
 	public Object testRabbitMq() {
-		mp.sendDataToQueue("test_queue_key", "消息内容！");
+		mp.sendDataToQueue("r_test_queue_key", "消息内容！");
 		return "v";
 	}
 }
