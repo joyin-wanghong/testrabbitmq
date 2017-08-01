@@ -18,7 +18,8 @@ public class TestController {
 	@RequestMapping("/doTest")
 	@ResponseBody
 	public Object testRabbitMq() {
-		mp.sendDataToQueue("r_test_queue_key", "��Ϣ���ݣ�");
+		mp.sendDataToQueue("test_queue_3", "这是向 test_queue_3 发送的消息 内容");		//向队列test_queue_3 中发送消息
+		mp.sendDataToQueue("test_queue_key", "这是向 test_queue_key 发送的消息 内容");		//向队列test_queue_key中发送消息
 		return "v";
 	}
 }
